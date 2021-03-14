@@ -1,0 +1,19 @@
+<h1>Lista de Jogos:</h1>
+</br>
+<script>
+function delsuccess()
+{
+alert("Jogo excluído com sucesso!!!");
+}
+</script>
+{{#each posts}}
+    <h2>{{dataValues.titulo}}</h2>
+    <p>{{dataValues.conteudo}}</p>
+    <small>Criado em: {{dataValues.createdAt}}</small></br>
+    <small>Atualizado em: {{dataValues.updatedAt}}</small></br>
+    </br>
+    <a href="/deletar/{{dataValues.id}}" onclick="delsuccess()"><button>Excluir</button></a>
+    <a href="/edit/{{dataValues.id}}"><button>Alterar</button></a>
+    <hr>
+
+{{/each}}
